@@ -14,20 +14,22 @@ Public Class Form1
         Log.SelectionColor = Color.Empty
         If File.Exists("PS_OS.exe") Then
             Log.AppendText(Environment.NewLine + "")
-            Log.AppendText(Environment.NewLine + "Delete old firmware files.. ")
+            If File.Exists("newFirmware.fwx") Then
+                Log.AppendText(Environment.NewLine + "Delete old firmware files.. ")
 
-            If File.Exists("PS4\FULL\PS4UPDATE.PUP") Then
-                File.Delete("PS4\FULL\PS4UPDATE.PUP")
+                If File.Exists("PS4\FULL\PS4UPDATE.PUP") Then
+                    File.Delete("PS4\FULL\PS4UPDATE.PUP")
+                End If
+                If File.Exists("PS4\UPDATE\PS4UPDATE.PUP") Then
+                    File.Delete("PS4\UPDATE\PS4UPDATE.PUP")
+                End If
+                If File.Exists("PS3\PS3UPDAT.PUP") Then
+                    File.Delete("PS3\PS3UPDAT.PUP")
+                End If
+                Log.SelectionColor = Color.ForestGreen
+                Log.AppendText("OK")
+                Log.SelectionColor = Color.Empty
             End If
-            If File.Exists("PS4\UPDATE\PS4UPDATE.PUP") Then
-                File.Delete("PS4\UPDATE\PS4UPDATE.PUP")
-            End If
-            If File.Exists("PS3\PS3UPDAT.PUP") Then
-                File.Delete("PS3\PS3UPDAT.PUP")
-            End If
-            Log.SelectionColor = Color.ForestGreen
-            Log.AppendText("OK")
-            Log.SelectionColor = Color.Empty
             Log.AppendText(Environment.NewLine + "Rename old version..")
             Timer2.Enabled = True
         Else
