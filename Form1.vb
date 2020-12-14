@@ -17,6 +17,12 @@ Public Class Form1
             If File.Exists("newFirmware.fwx") Then
                 Log.AppendText(Environment.NewLine + "Delete old firmware files.. ")
 
+                If File.Exists("PS5\FULL\PS5UPDATE.PUP") Then
+                    File.Delete("PS5\FULL\PS5UPDATE.PUP")
+                End If
+                If File.Exists("PS5\UPDATE\PS5UPDATE.PUP") Then
+                    File.Delete("PS5\UPDATE\PS5UPDATE.PUP")
+                End If
                 If File.Exists("PS4\FULL\PS4UPDATE.PUP") Then
                     File.Delete("PS4\FULL\PS4UPDATE.PUP")
                 End If
