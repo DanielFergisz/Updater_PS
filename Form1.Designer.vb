@@ -25,6 +25,7 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.Log = New System.Windows.Forms.RichTextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'Log
@@ -39,6 +40,10 @@ Partial Class Form1
         'Timer1
         '
         Me.Timer1.Interval = 2000
+        '
+        'Timer2
+        '
+        Me.Timer2.Interval = 1000
         '
         'Form1
         '
@@ -55,4 +60,5 @@ Partial Class Form1
 
     Friend WithEvents Log As RichTextBox
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Timer2 As Timer
 End Class
