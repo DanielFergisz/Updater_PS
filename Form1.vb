@@ -41,10 +41,10 @@ Public Class Form1
         Timer2.Enabled = False
         My.Computer.FileSystem.RenameFile("PS_OS.exe", "PS_OS.exe.old")
         Dim client As New Net.WebClient
-        Dim newVersion As String = client.DownloadString("http://dragondev.pl/apk/latestVersion.txt")
+        Dim newVersion As String = client.DownloadString("http://repairbox.pl/PS_OS/latestVersion.txt")
         Log.AppendText(Environment.NewLine + "Download new version...")
         Threading.Thread.Sleep(300)
-        client.DownloadFile("http://dragondev.pl/apk/" + newVersion + "/PS_OS.exe", appPath + "\PS_OS.exe")
+        client.DownloadFile("http://repairbox.pl/PS_OS/" + newVersion + "/PS_OS.exe", appPath + "\PS_OS.exe")
         client.Dispose()
         Threading.Thread.Sleep(3000)
         Process.Start("PS_OS.exe")
