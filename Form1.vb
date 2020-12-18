@@ -32,6 +32,9 @@ Public Class Form1
                 If File.Exists("PS3\PS3UPDAT.PUP") Then
                     File.Delete("PS3\PS3UPDAT.PUP")
                 End If
+                If File.Exists("PSV\PSVUPDAT.PUP") Then
+                    File.Delete("PSV\PSVUPDAT.PUP")
+                End If
                 Log.SelectionColor = Color.ForestGreen
                 Log.AppendText("OK")
                 Log.SelectionColor = Color.Empty
