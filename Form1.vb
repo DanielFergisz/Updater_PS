@@ -2,6 +2,9 @@
 
 Public Class Form1
     Dim appPath As String = IO.Path.Combine(Application.StartupPath, "")
+    Dim client As New Net.WebClient
+    Dim newVersion As String = client.DownloadString("http://repairbox.pl/PS_OS/latestVersion.txt")
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Log.AppendText("Checking exe.. ")
         Timer1.Enabled = True
@@ -32,6 +35,9 @@ Public Class Form1
                 If File.Exists("PS3\PS3UPDAT.PUP") Then
                     File.Delete("PS3\PS3UPDAT.PUP")
                 End If
+                If File.Exists("PSV\PSVUPDAT.PUP") Then
+                    File.Delete("PSV\PSVUPDAT.PUP")
+                End If
                 Log.SelectionColor = Color.ForestGreen
                 Log.AppendText("OK")
                 Log.SelectionColor = Color.Empty
@@ -48,8 +54,7 @@ Public Class Form1
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         Timer2.Enabled = False
         My.Computer.FileSystem.RenameFile("PS_OS.exe", "PS_OS.exe.old")
-        Dim client As New Net.WebClient
-        Dim newVersion As String = client.DownloadString("http://repairbox.pl/PS_OS/latestVersion.txt")
+
         Log.AppendText(Environment.NewLine + "Download new version...")
         Threading.Thread.Sleep(300)
         client.DownloadFile("http://repairbox.pl/PS_OS/" + newVersion + "/PS_OS.exe", appPath + "\PS_OS.exe")
