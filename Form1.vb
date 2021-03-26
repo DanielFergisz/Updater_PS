@@ -38,6 +38,9 @@ Public Class Form1
                 If File.Exists("PSV\PSVUPDAT.PUP") Then
                     File.Delete("PSV\PSVUPDAT.PUP")
                 End If
+                If File.Exists("PSP\EBOOT.PBP") Then
+                    File.Delete("PSP\EBOOT.PBP")
+                End If
                 Log.SelectionColor = Color.ForestGreen
                 Log.AppendText("OK")
                 Log.SelectionColor = Color.Empty

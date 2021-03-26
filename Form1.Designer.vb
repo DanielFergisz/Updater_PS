@@ -31,10 +31,10 @@ Partial Class Form1
         'Log
         '
         Me.Log.Location = New System.Drawing.Point(9, 10)
-        Me.Log.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Log.Margin = New System.Windows.Forms.Padding(2)
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
-        Me.Log.Size = New System.Drawing.Size(313, 84)
+        Me.Log.Size = New System.Drawing.Size(334, 84)
         Me.Log.TabIndex = 0
         Me.Log.Text = ""
         '
@@ -50,12 +50,12 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(330, 102)
+        Me.ClientSize = New System.Drawing.Size(354, 102)
         Me.Controls.Add(Me.Log)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "UPDATER PlayStation OS"
+        Me.Text = "UPDATER PlayStation OS v1.02"
         Me.ResumeLayout(False)
 
     End Sub
