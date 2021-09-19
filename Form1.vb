@@ -70,4 +70,8 @@ Public Class Form1
             End If
         Next
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Process.Start("https://www.repairbox.pl")
+    End Sub
 End Class
