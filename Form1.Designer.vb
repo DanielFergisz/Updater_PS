@@ -39,7 +39,7 @@ Partial Class Form1
         Me.Log.Cursor = System.Windows.Forms.Cursors.Default
         Me.Log.Font = New System.Drawing.Font("Verdana", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.Log.Location = New System.Drawing.Point(9, 10)
-        Me.Log.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Log.Margin = New System.Windows.Forms.Padding(2)
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
         Me.Log.Size = New System.Drawing.Size(334, 111)
@@ -70,7 +70,7 @@ Partial Class Form1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(11, 125)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(333, 38)
         Me.PictureBox1.TabIndex = 1
@@ -83,12 +83,12 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(350, 169)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Log)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "PS_OS Updater v1.04"
+        Me.Text = "PS_OS Updater v1.05"
+        Me.TopMost = True
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
